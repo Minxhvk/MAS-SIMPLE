@@ -18,7 +18,7 @@ class WebSecurityConfig {
         http.csrf { obj: CsrfConfigurer<HttpSecurity> -> obj.disable() }
 
         http.authorizeHttpRequests {
-            it.requestMatchers("/users/**").permitAll()
+            it.requestMatchers("/user-service/**", "/health_check").permitAll()
                 .anyRequest().authenticated()
         }
 

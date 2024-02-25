@@ -1,10 +1,24 @@
 package com.example.userservice.dto.user
 
-import java.util.*
+import com.example.userservice.domain.user.UserEntity
+import com.example.userservice.dto.order.OrderDto
+import java.time.LocalDateTime
 
 data class UserDto(
-    val id: Long,
+    val userId: Long?,
     val email: String,
     val name: String,
-    val createdAt: Date,
-)
+    val createdAt: LocalDateTime,
+) {
+
+    companion object {
+        fun of(user: UserEntity): UserDto {
+            return UserDto(
+                userId = user.id,
+                email = user.email,
+                name = user.name,
+                createdAt = user.createdAt,
+            )
+        }
+    }
+}

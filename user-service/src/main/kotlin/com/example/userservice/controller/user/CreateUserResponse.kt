@@ -3,7 +3,7 @@ package com.example.userservice.controller.user
 import com.example.userservice.domain.user.UserEntity
 
 data class CreateUserResponse(
-    val id: Long?,
+    val userId: Long?,
     val email: String,
     val name: String,
 ) {
@@ -11,7 +11,7 @@ data class CreateUserResponse(
     companion object {
         fun of(user: UserEntity): CreateUserResponse {
             return CreateUserResponse(
-                id = user.id,
+                userId = user.id,
                 email = user.email,
                 name = user.name,
             )
