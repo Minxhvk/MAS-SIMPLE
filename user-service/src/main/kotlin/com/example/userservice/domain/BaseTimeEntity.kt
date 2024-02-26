@@ -24,7 +24,7 @@ abstract class BaseTimeEntity {
     @LastModifiedDate
     lateinit var lastModifiedDate: LocalDateTime
 
-    @Column(name = "is_deleted", nullable = false)
+    @Column(nullable = false)
     var isdeleted: Boolean = false
 
     override fun equals(other: Any?): Boolean {
