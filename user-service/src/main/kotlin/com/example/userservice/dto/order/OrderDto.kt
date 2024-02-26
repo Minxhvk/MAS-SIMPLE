@@ -1,6 +1,6 @@
 package com.example.userservice.dto.order
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class OrderDto(
     val orderId: Long,
@@ -8,6 +8,6 @@ data class OrderDto(
     val qty: Int,
     val unitPrice: Int,
     val totalPrice: Int,
-    val createdAt: Date,
+    val createdAt: LocalDateTime,
 ) {
 }

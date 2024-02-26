@@ -1,7 +1,6 @@
 package com.example.userservice.dto.user
 
 import com.example.userservice.domain.user.UserEntity
-import com.example.userservice.dto.order.OrderDto
 import java.time.LocalDateTime
 
 data class UserDto(
